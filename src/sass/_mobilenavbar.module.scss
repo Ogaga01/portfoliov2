@@ -1,0 +1,107 @@
+@import 'variables';
+@import 'mixins';
+
+.mobile_navigation {
+    // display: none;
+
+    @include respond (mob-nav-b){
+        display: none;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    color: $color-tertiary;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $background;
+
+
+    @include respond (mob-nav){
+       &--title {
+        font-size: 3.5rem;
+       } 
+
+       &--menu_icon {
+        font-size: 3.5rem;
+       }
+    }
+}
+
+.slider {
+    @include respond (mob-nav-b){
+        display: none;
+    }
+
+    @include respond (mob-nav){
+        position: fixed;
+        min-width: 100%;
+        height: 100vh;
+        top: -100%;
+        color:$background;
+        background-color: $color-tertiary;
+        transition: 1s ease;
+        z-index: 20;
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7rem;
+        }
+
+        &__closed {
+            display: flex;
+            cursor: pointer;
+            justify-content: flex-end;
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+
+        &__close {
+            font-size: 5rem;
+        }
+    }
+}
+
+.active{
+    @include respond (mob-nav-b){
+        display: none;
+    }
+
+    @include respond (mob-nav){
+        position: fixed;
+        min-width: 100%;
+        height: 100vh;
+        top: 0%;
+        color:white;
+        background-color: $color-tertiary;
+        transition: 1s ease;
+        z-index: 10;
+    }
+}
+
+.navlink {
+    @include respond (mob-nav-b){
+        display: none;
+    }
+
+    @include respond (mob-nav){
+        margin-block: 3rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: $background;
+    }
+
+    &:hover,
+    &:active {
+        color: $color-primary;
+        transform: translateX(1rem);
+    }
+}
+
+
+

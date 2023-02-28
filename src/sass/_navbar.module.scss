@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixins';
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 7rem;
+    background-color: $color-tertiary;
+    padding: 2rem 5rem;
+    margin-bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    @include respond (mob-nav){
+        display: none;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 500;
+        color: $color-white;
+        width: 25%;
+    }
+
+    &__nav {
+        width: 40%;
+        color: $color-white;
+        font-size: 1.7rem;
+        font-weight: 200;
+
+        @include respond(tab-land){
+            width: 45%;
+        }
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navlink {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $color-white;
+}
+
+.navlink:hover {
+    color: $color-primary;
+}
+
+.active {
+    color: $color-primary;
+}

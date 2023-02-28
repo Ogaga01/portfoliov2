@@ -1,0 +1,130 @@
+@import 'variables';
+@import 'mixins';
+@import 'animation';
+
+.hero {
+    margin-top: 10vh;
+    width: 100%;
+    padding: 15rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    padding-bottom: 0rem;
+
+    @include respond (tab-port){
+        padding: 10rem;
+        padding-top: 15rem;
+    }
+
+    @include respond (mob-nav){
+        font-size: 2rem;
+        padding: 0 7rem;
+        padding-top: 19rem;
+    }
+
+    @include respond (phone){
+        padding: 0 2rem;
+        padding-top: 19rem;
+    }
+
+    &__greeting {
+        font-size: 1.8rem;
+        color: $color-primary;
+
+        @include respond (tab-land-max){
+            font-size: 2rem;
+        }
+    }
+
+    &__name {
+        font-size: 5rem;
+        color: $color-tertiary;
+        margin-bottom: 1rem;
+
+        @include respond (tab-land-max){
+            font-size: 6.2rem;
+        }
+
+        @include respond (mini-phone){
+            font-size: 5rem;
+        }
+    }
+
+    &__skills {
+        display: flex;
+        margin-bottom: 1.5rem;
+
+        &--item {
+            list-style: none;
+            padding: 0rem 1rem;
+            font-size: 1.7rem;
+            color: $color-tertiary;
+
+            @include respond (tab-land-max){
+            font-size: 1.8rem;
+        }
+
+            &:not(:last-child){
+                border-right: .2rem solid $color-primary;
+            }
+        }
+    }
+
+    &__action {
+        font-size: 1.5rem;
+        width: 50%;
+        font-weight: 300;
+        color: $color-primary;
+        margin-bottom: 2rem;
+
+        @include respond (tab-land-max){
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            width: 65%;
+        }
+
+        @include respond (tab-land){
+            width: 75%;
+        }
+
+        @include respond (mob-nav){
+            width: 85%;
+        }
+
+        @include respond (phone){
+            width: 100%;
+        }
+    }
+
+    &__links {
+        display: flex;
+    }
+
+    &__link {
+        background-color: $color-tertiary;
+        height: 5rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        color: $color-white;
+        font-size: 1.7rem;
+        padding: 2rem;
+        margin-right: 3rem;
+        text-decoration: none;
+        box-shadow: 0 1rem 2rem rgba($color-tertiary,.2);
+        cursor: pointer;
+        border-radius: .5rem;
+        transition: all .5s;
+
+        @include respond (tab-land-max){
+            font-size: 2rem;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, .15);
+            transform: translateY(-.3rem);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15rem;
+    padding-top: 15rem;
+
+    @include respond (tab-port){
+        padding: 10rem;
+        padding-top: 15rem;
+    }
+
+    @include respond (mob-nav){
+        padding: 0 7rem;
+        padding-top: 19rem;
+    }
+
+    @include respond (phone){
+        padding: 0 2rem;
+        padding-top: 19rem;
+    }
+
+    &__div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+
+        @include respond (tab-port){
+        display: flex;
+        flex-direction: column;
+    }
+    }
+
+    &__head {
+        font-size: 2.5rem;
+        color: $color-primary;
+        margin-bottom: 4rem;
+    }
+}

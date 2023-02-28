@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'mixins';
+
+.article {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    padding-bottom: 0;
+
+    &__author {
+        display: flex;
+        width: 50%;
+        margin-top: 2rem;
+        align-items: flex-end;
+
+        @include respond (tab-port){
+        width: 70%;
+    }
+
+        @include respond (phone){
+        width: 100%;
+    }
+
+        &--img {
+            width: 20%;
+        }
+
+        &--div {
+            width: 100%;
+            border-radius: 50%;
+            border: 1rem solid $color-tertiary;
+        }
+
+        &--info {
+            margin-left: 2rem;
+        }
+
+        &--name {
+            color:  $color-tertiary;
+        }
+
+        &--jd {
+            color: $color-primary;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__recc {
+        font-size: 2rem;
+        font-weight: 300;
+        padding-top: 2rem;
+        padding-left: .5rem;
+        margin-bottom: 2rem;
+
+        &::before {
+            content: '\201C';
+            position: absolute;
+            top: 0;
+            left: .5rem;
+            line-height: 1;
+            font-size: 20rem;   
+            font-family: inherit;
+            color: $color-tertiary;
+            z-index: -1;
+            margin-right: 1.5rem;
+
+            @include respond (tab-port){
+        font-size: 15rem;
+    }
+        }
+    }
+}
