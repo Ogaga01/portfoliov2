@@ -1,19 +1,42 @@
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import { Project } from "../types/types";
+import { motion, Variants } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import styles from './../sass/_projectcard.module.scss'
+import styles from "./../sass/_projectcard.module.scss";
 
 interface Props {
   props: Project;
 }
 
+const cardVariants: Variants = {
+  offscreen: {
+    scale: 0.5,
+    opacity: 0,
+  },
+  onscreen: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 const ProjectCard: FC<Props> = ({ props }) => {
   const { name, description, image, github, live, languages } = props;
 
+  const scrollRef = useRef(null);
+
   return (
-    <div className={styles["project"]}>
+    <motion.div
+      variants={cardVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ root: scrollRef, once: true }}
+      className={styles["project"]}
+    >
       <div className={styles["project__icon"]}>
-              <img src={image} alt={name} className={styles['project__icon--img']} />
+        <img src={image} alt={name} className={styles["project__icon--img"]} />
       </div>
       <div className={styles["project__info"]}>
         <h1 className={styles["project__info--title"]}>{name}</h1>
@@ -28,11 +51,11 @@ const ProjectCard: FC<Props> = ({ props }) => {
             <FiGithub />
           </a>
           <a className={styles["project__info--link"]} href={live}>
-            <FiExternalLink className={styles["project__info--links"]}/>
+            <FiExternalLink className={styles["project__info--links"]} />
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

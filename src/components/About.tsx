@@ -1,15 +1,22 @@
 import React, { FC } from "react";
 import ogaga from "./../images/ogaga.jpeg";
 import { Link } from "react-scroll";
+import {motion} from 'framer-motion'
 import styles from './../sass/_about.module.scss'
 
 const About: FC = () => {
   return (
-    // <Fade bottom>
-    <section id="about" className={styles["about"]}>
+    <motion.section
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale:1 }}
+      transition={{ duration: 1 }}
+      viewport={{once: true}}
+      id="about"
+      className={styles["about"]}
+    >
       <h1 className={styles["about__title"]}>About Me</h1>
       <div className={styles["about__info"]}>
-        <div className={styles['about__info--art']}>
+        <div className={styles["about__info--art"]}>
           <p className={styles["about__one"]}>
             Hello! My name is Ogaga Iyara Nicholas and I'm a creative developer
             who loves to work on appealing websites with a passion for User
@@ -57,8 +64,7 @@ const About: FC = () => {
           <img className={styles.image} src={ogaga} alt="Ogaga" />
         </div>
       </div>
-    </section>
-    // </Fade>
+    </motion.section>
   );
 };
 

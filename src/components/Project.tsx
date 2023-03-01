@@ -5,7 +5,6 @@ import styles from './../sass/_project.module.scss'
 
 const Project: FC = () => {
     return (
-      // <Fade bottom>
         <section id='projects' className={styles["projects"]}>
           <h1 className={styles["projects__head"]}>My Featured Projects</h1>
           <div className={styles["projects__div"]}>
@@ -14,7 +13,6 @@ const Project: FC = () => {
             ))}
           </div>
         </section>
-      // {/* </Fade> */}
     );
 };
 

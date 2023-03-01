@@ -46,6 +46,11 @@
         margin: 0 25%; 
         margin-bottom: 2rem;
 
+        @include respond (mob-nav){
+                width: 70%;
+                margin: 0 15%;
+            }
+
 
         &--list {
             width: 10%;

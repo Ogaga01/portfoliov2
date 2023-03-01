@@ -20,7 +20,6 @@ const Contact: FC = () => {
   };
 
   return (
-    // <Fade bottom>
       <section id="contact" className={styles["contact"]}>
         <h1 className={styles["contact__heading"]}>Contact Me</h1>
         <div className={styles["contact__body"]}>
@@ -65,7 +64,6 @@ const Contact: FC = () => {
           </form>
         </div>
       </section>
-    // </Fade>
   );
 };
 

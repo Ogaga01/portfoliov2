@@ -48,8 +48,8 @@
     }
 
     &__title {
-        font-size: 2.5rem;
-        color: $color-primary;
+        font-size: 3rem;
+        color: $color-tertiary;
         margin-bottom: 2rem;
 
         @include respond (tab-land){
@@ -69,7 +69,7 @@
     &__two,
     &__three,
     &__four {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         width: 90%;
         font-weight: 300;
         color: $color-black;

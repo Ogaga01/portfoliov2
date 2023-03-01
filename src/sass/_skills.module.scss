@@ -23,8 +23,8 @@
     }
 
     &__heading {
-        font-size: 2.5rem;
-        color: $color-primary;
+        font-size: 3rem;
+        color: $color-tertiary;
         margin-bottom: 4rem;
     }
 
@@ -44,7 +44,6 @@
     &__section {
         display: flex;
         width: 45%;
-        // margin-right: 5%;
         margin-bottom: 2rem;
         justify-content: space-between;
 

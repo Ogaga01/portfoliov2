@@ -5,13 +5,21 @@ import {
   FaGithub,
   FaRegComments,
 } from "react-icons/fa";
-import styles from './../sass/_skills.module.scss'
+import { motion } from "framer-motion";
+import styles from "./../sass/_skills.module.scss";
 
 const Skills: FC = () => {
   return (
-    <section id="skills" className={styles["skills"]}>
+    <motion.section
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      id="skills"
+      className={styles["skills"]}
+    >
       <h1 className={styles["skills__heading"]}>Technical and Soft Skills</h1>
-      <div className={styles['skills__content']}>
+      <div className={styles["skills__content"]}>
         <div className={styles["skills__section"]}>
           <div className={styles["skills__section--icons"]}>
             <FaLaptop className={styles["skills__section--icon"]} />
@@ -63,11 +71,13 @@ const Skills: FC = () => {
               Pair Programming
             </li>
             <li className={styles["skills__section--item"]}>Team Work</li>
-            <li className={styles["skills__section--item"]}>Good Communication</li>
+            <li className={styles["skills__section--item"]}>
+              Good Communication
+            </li>
           </ul>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
