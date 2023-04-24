@@ -2,6 +2,15 @@ import { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    name: "Amazon Clone",
+    image: "/images/Amazon-clone.jpg",
+    description:
+      "A clone of the Amazon.com website. Add to cart, edit user details.",
+    languages: ["React", "NodeJS", "Redux", "TypeScript"],
+    github: "https://github.com/Ogaga01/Amazon-App-Clone-Frontend",
+    live: "https://scintillating-pixie-59f96e.netlify.app",
+  },
+  {
     name: "Countries Info",
     image: "/images/countries-info.jpg",
     description:
