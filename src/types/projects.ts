@@ -2,6 +2,15 @@ import { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    name: "Friendly Budget",
+    image: "/images/Friendly-Budget.jpg",
+    description:
+      "A mobile web application where users can manage their budget: they have a list of transactions associated with a category, so that they can see how much money they spent and on what.",
+    languages: ["Ruby", "Rails", "Postgres"],
+    github: "https://github.com/Ogaga01/Budget-App",
+    live: "https://friendly-budget.onrender.com",
+  },
+  {
     name: "Amazon Clone",
     image: "/images/Amazon-clone.jpg",
     description:
