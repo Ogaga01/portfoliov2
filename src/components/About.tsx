@@ -1,16 +1,16 @@
 import React, { FC } from "react";
 import ogaga from "./../images/ogaga.jpeg";
 import { Link } from "react-scroll";
-import {motion} from 'framer-motion'
-import styles from './../sass/_about.module.scss'
+import { motion } from "framer-motion";
+import styles from "./../sass/_about.module.scss";
 
 const About: FC = () => {
   return (
     <motion.section
       initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale:1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      viewport={{once: true}}
+      viewport={{ once: true }}
       id="about"
       className={styles["about"]}
     >
@@ -24,15 +24,10 @@ const About: FC = () => {
             things for the web and learning new things.
           </p>
           <p className={styles["about__two"]}>
-            I am a relatively new Full-Stack Developer with knowledge in
-            TypeScript, React, Redux, Ruby and NodeJS.{"\n"} Since March 2022,
-            I've been building my technical, leadership, and collaborative
-            skills at{" "}
-            <span className={styles["about__microverse"]}>
-              <a href="https://www.microverse.org/">Microverse</a>
-            </span>{" "}
-            through collaborating and pair programming with other students from
-            all over the world.
+            I am a Full-Stack Developer with over two years experience and
+            knowledge in TypeScript, React, Redux, Ruby on Rails, and NodeJS.
+            {"\n"} I am Knowledgeable in technology and writing code to create
+            systems that are reliable and user-friendly.
           </p>
           <p className={styles["about__three"]}>
             Developing innovative programs that expedite the efficiency and
