@@ -2,6 +2,15 @@ import { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    name: "Elite Travelers",
+    image: "/images/Elite-Travelers.jpg",
+    description:
+      "Travel the world in style. Reserve a Private Jet and a Luxury Car for your next trip. Elite travelers app gives you the opportuinity to go places like an Elite, view infomation about our private planes and your favorite cars.",
+    languages: ["React", "TypeScript", "Ruby", "Rails", "PostgreSQL"],
+    github: "https://github.com/Ogaga01/Elite-Traveler-Frontend",
+    live: "https://elite-travelers.netlify.app/",
+  },
+  {
     name: "Friendly Budget",
     image: "/images/Friendly-Budget.jpg",
     description:
