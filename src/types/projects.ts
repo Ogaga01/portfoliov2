@@ -2,6 +2,15 @@ import { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    name: "Pundit Auto-Mobile Nigeria",
+    image: "/images/Pundit.jpg",
+    description:
+      "Pundit Auto-Mobile Nigeria is the main website for an auto-mobile repair company in Nigeria. We work on most Domestic and Foreign vehicles including Chevy, Ford, Toyota, Honda, Nissan, Lexus, Mercedes Benz, Land Rover and more.",
+    languages: ["React", "TypeScript", "SASS"],
+    github: "https://github.com/Ogaga01/Pundit_Automobile_Nigeria",
+    live: "https://punditautomobilenigeria.netlify.app/",
+  },
+  {
     name: "Elite Travelers",
     image: "/images/Elite-Travelers.jpg",
     description:
