@@ -32,7 +32,7 @@ const Hero: FC = () => {
           </Link>
           <a
             className={styles["hero__link"]}
-            href="https://docs.google.com/document/d/1qFzZ41ulkY1H1wA4-e5KH_72SAY_n1FsvedcsLidHjs/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1Yn69RIL2vPBFdkyI8JOXJ20upzPNz0qL/edit?usp=sharing&ouid=113747237026570318120&rtpof=true&sd=true"
           >
             Get My Resume
           </a>
