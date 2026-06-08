@@ -4,17 +4,21 @@ export const projects: Project[] = [
   {
     name: "Pundit Auto-Mobile Nigeria",
     image: "/images/Pundit.jpg",
+    role: "Frontend engineering",
+    impact: "Company website for a Nigerian auto repair business",
     description:
-      "Pundit Auto-Mobile Nigeria is the main website for an auto-mobile repair company in Nigeria. We work on most Domestic and Foreign vehicles including Chevy, Ford, Toyota, Honda, Nissan, Lexus, Mercedes Benz, Land Rover and more.",
-    languages: ["React", "TypeScript", "SASS"],
+      "A responsive company website that presents services, supported vehicle brands, and customer contact paths for an automobile repair business.",
+    languages: ["React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/Ogaga01/Pundit_Automobile_Nigeria",
     live: "https://punditautomobilenigeria.netlify.app/",
   },
   {
     name: "Elite Travelers",
     image: "/images/Elite-Travelers.jpg",
+    role: "Full-stack development",
+    impact: "Reservation experience for private jets and luxury cars",
     description:
-      "Travel the world in style. Reserve a Private Jet and a Luxury Car for your next trip. Elite travelers app gives you the opportuinity to go places like an Elite, view infomation about our private planes and your favorite cars.",
+      "A travel booking experience where users can browse private planes and luxury cars, then reserve premium travel options for their trips.",
     languages: ["React", "TypeScript", "Ruby", "Rails", "PostgreSQL"],
     github: "https://github.com/Ogaga01/Elite-Traveler-Frontend",
     live: "https://elite-travelers.netlify.app/",
@@ -22,26 +26,32 @@ export const projects: Project[] = [
   {
     name: "Friendly Budget",
     image: "/images/Friendly-Budget.jpg",
+    role: "Backend and UI development",
+    impact: "Budget tracking with category-level spending visibility",
     description:
-      "A mobile web application where users can manage their budget: they have a list of transactions associated with a category, so that they can see how much money they spent and on what.",
-    languages: ["Ruby", "Rails", "Postgres"],
+      "A mobile web application where users can manage transactions by category and understand where their money is going.",
+    languages: ["Ruby", "Rails", "PostgreSQL"],
     github: "https://github.com/Ogaga01/Budget-App",
     live: "https://friendly-budget.onrender.com",
   },
   {
     name: "Amazon Clone",
-    image: "/images/Amazon-clone.jpg",
+    image: "/images/Amazon-Clone.jpg",
+    role: "Frontend engineering",
+    impact: "Shopping flow with cart and user detail interactions",
     description:
-      "A clone of the Amazon.com website. Add to cart, edit user details.",
-    languages: ["React", "NodeJS", "Redux", "TypeScript"],
+      "A commerce interface inspired by Amazon, with product browsing, cart interactions, and user detail editing.",
+    languages: ["React", "Node.js", "Redux", "TypeScript"],
     github: "https://github.com/Ogaga01/Amazon-App-Clone-Frontend",
     live: "https://scintillating-pixie-59f96e.netlify.app",
   },
   {
     name: "Countries Info",
     image: "/images/countries-info.jpg",
+    role: "Frontend engineering",
+    impact: "Live country data with browsable detail screens",
     description:
-      "Render live data from the public API. This web application displays the list of all countries and allows the user to click on a country of his/her choice and see some information about that country.",
+      "An API-driven web application that displays country data and lets users inspect details for a selected country.",
     languages: ["React", "Countries API", "Redux"],
     github: "https://github.com/Ogaga01/Countries-Info-App",
     live: "https://candid-sfogliatella-37d461.netlify.app/",
@@ -49,26 +59,21 @@ export const projects: Project[] = [
   {
     name: "Space Travelers Hub",
     image: "/images/space-traveler.jpg",
+    role: "Frontend engineering",
+    impact: "SpaceX data integration with mission booking interactions",
     description:
-      "Render live data from the SpaceX API. This is web application for a company that provides commercial and scientific space travel services. It allows users to book rockets and join selected space missions.",
+      "A SpaceX API application where users can reserve rockets and join space missions through a clean booking interface.",
     languages: ["React", "Redux", "SpaceX API"],
     github: "https://github.com/Ogaga01/space-travelers-hub",
     live: "https://regal-genie-823357.netlify.app/",
   },
-  // {
-  //   name: "Todo List",
-  //   image: "/images/todo.jpg",
-  //   description:
-  //     "A todo list app in which the user can add new tasks, edit, complete or delete them. The user can also clear all the completed tasks.",
-  //   languages: ["Webpack", "JavaScript"],
-  //   github: "https://github.com/Ogaga01/To-do",
-  //   live: "https://ogaga01.github.io/To-do/",
-  // },
   {
     name: "Awesome Books",
     image: "/images/awesome-books.jpg",
+    role: "Frontend development",
+    impact: "Simple library management experience",
     description:
-      "A books library in which we can add/remove books, and view the available books.",
+      "A browser-based library app where users can add, remove, and review books in a small collection.",
     languages: ["Webpack", "JavaScript"],
     github: "https://github.com/Ogaga01/My-Awesome-Books",
     live: "https://ogaga01.github.io/My-Awesome-Books/",
@@ -76,17 +81,21 @@ export const projects: Project[] = [
   {
     name: "Leaders Board",
     image: "/images/leaders-board.jpg",
+    role: "Frontend development",
+    impact: "Score submission and persistence through an external API",
     description:
-      "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
-    languages: ["Webpack", "JavaScript", "Leaders Board API"],
+      "A leaderboard website that displays player scores, accepts new submissions, and persists data through an external API.",
+    languages: ["Webpack", "JavaScript", "Leaderboard API"],
     github: "https://github.com/Ogaga01/Microverse-Leadersboard-API",
     live: "https://legendary-kashata-ceb034.netlify.app",
   },
   {
     name: "Roll The Dice Game",
     image: "/images/roll-the-dice.jpg",
+    role: "Game UI development",
+    impact: "Interactive browser game with score tracking",
     description:
-      "Play a game with your friends 🕹. Roll the dice 🎲 till you get 100 points and win the game.",
+      "A two-player browser game where players roll dice, bank points, and race to reach 100 points.",
     languages: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Ogaga01/Roll-The-Dice-Game",
     live: "https://ogaga01.github.io/Roll-The-Dice-Game",
@@ -94,8 +103,10 @@ export const projects: Project[] = [
   {
     name: "Bookstore",
     image: "/images/bookstore.jpg",
+    role: "Frontend engineering",
+    impact: "Book collection management with Redux state",
     description:
-      "Similar to Awesome Books. Allows users add/remove books, and view the available books.",
+      "A React bookstore application where users can add, remove, and manage books in a Redux-powered interface.",
     languages: ["React", "Firebase", "Redux"],
     github: "https://github.com/Ogaga01/Bookstore-React",
     live: "https://amazing-pixie-f339d9.netlify.app",

@@ -1,6 +1,8 @@
 export type Project = {
   name: string;
   image: string;
+  role: string;
+  impact: string;
   description: string;
   languages: string[];
   github: string;

@@ -1,27 +1,28 @@
 import React, { FC } from "react";
-import { Recommendations } from "../types/recommendation";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
+import { Recommendations } from "../types/recommendation";
 import RecommendationCard from "./RecommendationCard";
-import styles from "./../sass/_recommendation.module.scss";
 
 const Recommendation: FC = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.2 }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       id="testimonials"
-      className={styles["testimonials"]}
+      className="section-shell"
     >
-      <h1 className={styles["testimonials__heading"]}>Testimonials</h1>
-      <Carousel className={styles["carousel"]}>
+      <p className="eyebrow">Testimonials</p>
+      <h2 className="section-title">What collaborators say</h2>
+      <p className="section-copy">
+        Feedback from developers who have worked with me in remote and collaborative settings.
+      </p>
+      <div className="mt-10 grid gap-6 lg:grid-cols-3">
         {Recommendations.map((recommendation) => (
-          <RecommendationCard props={recommendation} />
+          <RecommendationCard key={recommendation.name} recommendation={recommendation} />
         ))}
-      </Carousel>
+      </div>
     </motion.section>
   );
 };

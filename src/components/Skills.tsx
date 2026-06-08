@@ -1,81 +1,70 @@
 import React, { FC } from "react";
-import {
-  FaLaptopCode,
-  FaLaptop,
-  FaGithub,
-  FaRegComments,
-} from "react-icons/fa";
+import { FaGithub, FaLaptop, FaLaptopCode, FaRegComments } from "react-icons/fa";
 import { motion } from "framer-motion";
-import styles from "./../sass/_skills.module.scss";
+
+const skillGroups = [
+  {
+    title: "Languages",
+    icon: FaLaptop,
+    skills: ["JavaScript", "TypeScript", "Ruby", "Node.js"],
+  },
+  {
+    title: "Frameworks",
+    icon: FaLaptopCode,
+    skills: ["React", "Redux", "Ruby on Rails", "Tailwind CSS"],
+  },
+  {
+    title: "Version Control",
+    icon: FaGithub,
+    skills: ["Git", "GitHub", "GitLab", "GitFlow"],
+  },
+  {
+    title: "Collaboration",
+    icon: FaRegComments,
+    skills: ["Remote work", "Pair programming", "Teamwork", "Clear communication"],
+  },
+];
 
 const Skills: FC = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       id="skills"
-      className={styles["skills"]}
+      className="section-shell"
     >
-      <h1 className={styles["skills__heading"]}>Technical and Soft Skills</h1>
-      <div className={styles["skills__content"]}>
-        <div className={styles["skills__section"]}>
-          <div className={styles["skills__section--icons"]}>
-            <FaLaptop className={styles["skills__section--icon"]} />
-          </div>
-          <ul className={styles["skills__section--list"]}>
-            <h1 className={styles["skills__section--heading"]}>Languages</h1>
-            <li className={styles["skills__section--item"]}>
-              JavaScript (ES5/ES6)
-            </li>
-            <li className={styles["skills__section--item"]}>Ruby</li>
-            <li className={styles["skills__section--item"]}>Node.JS</li>
-            <li className={styles["skills__section--item"]}>TypeScript</li>
-          </ul>
-        </div>
-        <div className={styles["skills__section"]}>
-          <div className={styles["skills__section--icons"]}>
-            <FaLaptopCode className={styles["skills__section--icon"]} />
-          </div>
-          <ul className={styles["skills__section--list"]}>
-            <h1 className={styles["skills__section--heading"]}>Frameworks</h1>
-            <li className={styles["skills__section--item"]}>SASS</li>
-            <li className={styles["skills__section--item"]}>React</li>
-            <li className={styles["skills__section--item"]}>Redux</li>
-            <li className={styles["skills__section--item"]}>RoR</li>
-          </ul>
-        </div>
-        <div className={styles["skills__section"]}>
-          <div className={styles["skills__section--icons"]}>
-            <FaGithub className={styles["skills__section--icon"]} />
-          </div>
-          <ul className={styles["skills__section--list"]}>
-            <h1 className={styles["skills__section--heading"]}>
-              Version Control System
-            </h1>
-            <li className={styles["skills__section--item"]}>Git</li>
-            <li className={styles["skills__section--item"]}>GitHub</li>
-            <li className={styles["skills__section--item"]}>GitLab</li>
-            <li className={styles["skills__section--item"]}>GitFlow</li>
-          </ul>
-        </div>
-        <div className={styles["skills__section"]}>
-          <div className={styles["skills__section--icons"]}>
-            <FaRegComments className={styles["skills__section--icon"]} />
-          </div>
-          <ul className={styles["skills__section--list"]}>
-            <h1 className={styles["skills__section--heading"]}>Soft Skills</h1>
-            <li className={styles["skills__section--item"]}>Remote Working</li>
-            <li className={styles["skills__section--item"]}>
-              Pair Programming
-            </li>
-            <li className={styles["skills__section--item"]}>Team Work</li>
-            <li className={styles["skills__section--item"]}>
-              Good Communication
-            </li>
-          </ul>
-        </div>
+      <p className="eyebrow">Capabilities</p>
+      <h2 className="section-title">Technical and collaboration skills</h2>
+      <p className="section-copy">
+        A practical toolkit for building responsive interfaces, API-driven products,
+        and collaborative engineering workflows.
+      </p>
+      <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        {skillGroups.map(({ title, icon: Icon, skills }) => (
+          <article
+            key={title}
+            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft dark:border-white/10 dark:bg-white/5"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700 dark:bg-cyan-300/10 dark:text-cyan-300">
+                <Icon size={24} aria-hidden="true" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-950 dark:text-white">{title}</h3>
+            </div>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <li
+                  key={skill}
+                  className="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 dark:bg-white/10 dark:text-slate-200"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </motion.section>
   );
